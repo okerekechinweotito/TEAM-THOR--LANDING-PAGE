@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEAM THOR - LANDING PAGE</title>
-    <link rel="stylesheet" href="./style.css"></link>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zuri Landing Page ~ Team Thor</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <main class="wrapper">
-        <article class="welcome">
-           <section class="welcome__content"> 
-               <h1>Welcome to</h1>
-               <h2>Zuri Training Landing Page !</h2>
-               <h2 class="lgb">Learn , Build , Grow
-                <br>
-                Unlock your Intelligence @ Zuri Training</h2>
-                <h2>Proudly Sponsored by  </h2>
-                    <div class="zuri"></div>
-               </section>
-         </article>
- 
-        <article class="signup">
-            <section class="signup__content">
-            <h2 class="signup--heading">Sign Up</h2>
-            <form class="signup__form">
-            <label for="firstname">FirstName:
-              <input type="text" name="firstname">
-               </label> <br>
-                 <label for="lastname">LastName:
-                   <input type="text" name="lastname">
-               </label><br>
-                 <label for="email">Email:
-                   <input type="email" name="email"><br>
-                     <label for="password"> Password:
-                   <input type="password" name="password"><br>
-               </label><br>
-                <label for="password">Confirm Password:
-                   <input type="password" name="password">
-               </label><br>
-                <label for="terms" class="terms">
-                   <input type="checkbox" name="terms">
-                   I agree to the <strong>Terms of Users</strong>
-               </label><br>
-               <button class="signup__form--button1">Sign Up</button>
-               <button class="signup__form--button2">Sign Up ></button>
-            </form>
-            </section>
-           
-        </article>
-    </main>
-    
+  <div class="row">
+    <div class="landing col l7 s12">
+      <div>
+        <h3>Welcome to</h3>
+        <h5>Zuri Training Landing Page!</h5>
+
+        <h6 class="tagline">Learn, Build, Grow.</h6>
+        <h6>Unlock your intelligence with Zuri Training.</h6>
+      </div>
+
+      <div class="row footer">
+        <div class="col l4 m6 s8 offset-l4 offset-m3 offset-s2">
+          <small>Proudly sponsored by:</small>
+          <img class="responsive-img" src="img/zuri-x-i4g.png" alt="Zuri x I4G Logo">
+        </div>
+      </div>
+    </div>
+    <div class="form-area col l5 s12">
+      <div class="row">
+        <form class="col s12">
+          <h5>Sign Up</h5>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="" id="firstname" type="text" class="validate">
+              <label for="firstname">First Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="" id="lastname" type="text" class="validate">
+              <label for="lastname">Last Name:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="" id="email" type="email" class="validate">
+              <label for="email">Email:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="" id="password" type="password" class="validate">
+              <label for="password">Password:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="" id="password" type="password" class="validate">
+              <label for="password">Confirm Password:</label>
+            </div>
+          </div>
+          <p>
+            <label>
+              <input type="checkbox">
+              <span>I agree to the <span class="bold">Terms of Users</span></span>
+            </label>
+          </p>
+
+          <div class="col s12 form-action">
+            <button class="btn waves-effect waves-light sign-up">
+              Sign Up
+            </button>
+            <button class="btn waves-effect waves-light sign-in">
+              Sign In<i class="material-icons right">chevron_right</i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/materialize.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
