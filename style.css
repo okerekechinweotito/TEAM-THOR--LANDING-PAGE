@@ -124,9 +124,8 @@ h2 {
     padding: 0em 3em;
   }
 
-  .signup__form input[type*="text"],
-  .signup__form input[type*="email"],
-  .signup__form input[type*="password"] {
-    width: 50%;
+  .signup__form--button1,
+  .signup__form--button2 {
+    margin-bottom: 5em;
   }
 }
