@@ -107,7 +107,7 @@ h2 {
     flex-direction: column;
   }
   .welcome {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,11 +117,11 @@ h2 {
   }
 
   .signup {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0em 3em;
+    padding: 0em;
   }
 
   .signup__form--button1,
