@@ -489,7 +489,7 @@ nav {
   }
 
   .sticky .nav li {
-    padding: 10px 4px;
+    padding: 0;
     color: #bbb;
     border: none !important;
   }
@@ -547,4 +547,8 @@ nav {
 
 .footer__content .social__icons svg {
   margin-right: 30px;
+}
+
+.mb-2 {
+  margin-bottom: 20px;
 }
