@@ -167,6 +167,7 @@ button.sign-in:focus {
   font-style: italic;
   text-shadow: 0 0 #000;
 }
+
 /* 
 .footer {
   margin-top: 8rem;
@@ -174,7 +175,7 @@ button.sign-in:focus {
 
 .footer small {
   line-height: 35px;
-} */
+}  */
 
 @media only screen and (max-width: 600px) {
   .row .landing {
