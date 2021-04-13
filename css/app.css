@@ -43,6 +43,184 @@
    margin-bottom: 30px;
  }
 
+ header {
+   position: fixed;
+   z-index: 99;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 60px;
+   background-color: rgba(255, 255, 255, 0);
+   white-space: nowrap;
+ }
+
+ header::after {
+   clear: both;
+   content: "";
+   display: block;
+ }
+
+ .trigger {
+   display: table;
+   position: relative;
+   height: 100%;
+   color: #fff;
+   right: 0;
+   float: right;
+   margin: 22px;
+   cursor: pointer;
+ }
+
+ .trigger::before {
+   position: absolute;
+   content: 'MENU';
+   top: -110%;
+   right: 130%;
+   color: #fff;
+   height: 100%;
+   width: 40px;
+ }
+
+ .trigger span {
+   display: table-cell;
+   vertical-align: middle;
+ }
+
+ /* ----------------Menu Icon--------------- */
+
+ .trigger em,
+ .trigger em::after,
+ .trigger em::before {
+   display: block;
+   position: relative;
+   height: 2px;
+   width: 24px;
+   background-color: #fff;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+ }
+
+ /* ----------------Menu Central Line--------------- */
+
+ .trigger em {
+   margin: 6px auto 14px;
+   -webkit-transition: background-color .3s;
+   transition: background-color .3s;
+ }
+
+ .trigger em::before,
+ .trigger em::after {
+   position: absolute;
+   content: '';
+   left: 0;
+   -webkit-transition: -webkit-transform .3s;
+   transition: -webkit-transform .3s;
+   transition: transform .3s;
+   transition: transform .3s, -webkit-transform .3s;
+ }
+
+ /* ----------------Menu Icon Top Line--------------- */
+
+ .trigger em::before {
+   -webkit-transform: translateY(-6px);
+   -ms-transform: translateY(-6px);
+   transform: translateY(-6px);
+ }
+
+ /* ----------------Menu Icon Bottom Line--------------- */
+
+ .trigger em::after {
+   -webkit-transform: translateY(6px);
+   -ms-transform: translateY(6px);
+   transform: translateY(6px);
+ }
+
+ @media only screen and (min-width: 850px) {
+   .trigger {
+     display: none;
+   }
+ }
+
+ /* ---Transform Menu Icon Into An 'X' Icon--- */
+
+ header.open .trigger em {
+   background-color: rgba(255, 255, 255, 0);
+ }
+
+ /* -----------Rotate Top Line---------- */
+
+ header.open .trigger em::before {
+   -webkit-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+ }
+
+ /* -----------Rotate Bottom Line---------- */
+
+ header.open .trigger em::after {
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+ }
+
+ .zuri-logo {
+   display: inline-block;
+   float: left;
+ }
+
+ .zuri-logo img {
+   height: 45px;
+   margin: 8px 0 0 30px;
+ }
+
+ nav {
+   background-color: transparent;
+   box-shadow: none;
+ }
+
+ /* Navigation */
+
+ .nav {
+   float: left;
+   margin-left: 50px;
+   margin-top: -15px;
+   list-style: none;
+   -webkit-transition: all 0.3s ease-in;
+   transition: all 0.3s ease-in;
+ }
+
+ .nav li {
+   display: inline-block;
+   cursor: pointer;
+   margin-right: 40px;
+   padding: 13px 0;
+   color: #fff;
+   font-size: 95%;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+ }
+
+ .sticky {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: rgba(244, 244, 244, 0.95);
+   z-index: 999;
+   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19);
+ }
+
+ .sticky .nav li {
+   padding: 14px 0;
+   color: #555;
+   border-bottom: 3px solid transparent;
+   -webkit-transition: border-bottom 0.3s ease-in;
+   transition: border-bottom 0.3s ease-in;
+ }
+
  .row .landing {
    color: #fff;
    padding: 80px;
@@ -57,6 +235,7 @@
    height: 100%
  }
 
+ .landing h3,
  .landing .tagline {
    margin-top: 8rem
  }
@@ -166,12 +345,85 @@
   text-shadow: 0 0 #000;
 }
 
- .footer {
+ /* .footer {
    margin-top: 8rem
  }
 
  .footer small {
    line-height: 35px
+ } */
+
+ .footer {
+   background-color: #274CAB;
+   padding: 30px;
+ }
+
+
+
+ /* Media Queries */
+ @media (max-width: 850px) {
+   nav,
+   .nav {
+     top: 0;
+     left: 0;
+     width: 100%;
+     margin-bottom: 8px;
+   }
+
+   .nav {
+     margin: 0 auto;
+     background-color: #000;
+     border-top: 1px solid #ccc;
+     display: none;
+     overflow-x: hidden;
+     -webkit-transform: translateZ(0);
+     transform: translateZ(0);
+     will-change: transform;
+     -webkit-transition: -webkit-transform .3s;
+     transition: -webkit-transform .3s;
+     transition: transform .3s;
+     transition: transform .3s, -webkit-transform .3s;
+   }
+
+   .logo {
+     margin: 6px auto;
+   }
+
+   .nav li {
+     display: block;
+     padding: 0 15px;
+     width: 100%;
+     top: 0;
+     left: 0;
+     margin: 5px 5px;
+     border: none;
+     -webkit-transition: all .3s ease-in;
+     transition: all .3s ease-in
+   }
+
+   .nav li:hover {
+     border: none;
+     background-color: #1e87f0;
+     color: #fff;
+   }
+
+   .sticky {
+     background-color: rgba(0, 0, 0, 0.9);
+     z-index: 999;
+     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19);
+   }
+
+   .sticky .nav li {
+     padding: 10px 4px;
+     color: #bbb;
+     border: none !important;
+   }
+
+   .sticky .nav li:hover {
+     border: none !important;
+     color: #fff;
+   }
  }
 
  @media only screen and (max-width:600px) {
